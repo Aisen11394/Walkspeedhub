@@ -1,9 +1,9 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/kav"))()
-local Window = Library.CreateLib("TITLE", "DarkTheme")
-local Tab = Window:NewTab("TabName")
-local Section = Tab:NewSection("Section Name")
-Section:NewButton("ButtonText", "ButtonInfo", function()
-    print("Clicked")
+local Window = Library.CreateLib("WalkspeedHub", "DarkTheme")
+local Tab = Window:NewTab("Main1")
+local Section = Tab:NewSection("Main")
+Section:NewButton("Click to bypass anti-cheat", "Off anti-cheat", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Aisen11394/antiteleport/refs/heads/main/.lua"))()
 end)
 button:UpdateButton("New Text")
 Section:NewToggle("ToggleText", "ToggleInfo", function(state)
@@ -29,8 +29,10 @@ end)
 Section:NewSlider("SliderText", "SliderInfo", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
-Section:NewTextBox("TextboxText", "TextboxInfo", function(txt)
-	print(txt)
+Section:NewTextBox("Set Walkspeed", "Change your walkspeed", function(spd)
+	while task.wait() do
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = spd
+	end
 end)
 
 Section:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.F, function()
