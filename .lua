@@ -1,4 +1,4 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/kav"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/refs/heads/main/source.lua"))()
 local Window = Library.CreateLib("WalkspeedHub", "DarkTheme")
 local Tab = Window:NewTab("Main1")
 local Section = Tab:NewSection("Main")
